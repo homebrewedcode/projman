@@ -1,0 +1,10 @@
+<h1>Create a Project</h1>
+<%= form_for @project, url: { action: "create" } do |project|%>
+    <%= project.text_field :title %>
+    <br />
+    <%= project.text_area :description %>
+    <br />
+    <%= project.submit "Create New Project" %>
+<% end %>
+<%= link_to 'Cancel and return to index', projects_path %>
+
