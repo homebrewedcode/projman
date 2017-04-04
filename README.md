@@ -14,4 +14,5 @@ I'll eventually add the following:
 * Allow other users to view projects and tasks
 * Allow user to allow other users to add tasks to a given project
 
+This is essentially my first attempt at taking the training wheels off, and to get out of the "tutorials only" level
 It's not much but gotta start somewhere!

@@ -28,9 +28,18 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    @project.destroy
+    flash[:danger] = "Project successfully deleted"
+    redirect_to projects_path
   end
 
   def update
+    if @project.update(project_params)
+      flash[:success] = "Project successfully updated."
+      redirect_to project_path(@project)
+    else
+      render :edit
+    end
   end
 
   private

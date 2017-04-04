@@ -1,4 +1,8 @@
 <h1><%= @project.title %></h1>
+<% if flash[:success] %>
+    <%= flash[:success] %>
+<% end %>
 <p><%= @project.description %></p>
 <p><%= link_to 'Edit Project', edit_project_path(@project) %></p>
-<%= link_to 'All Projects', projects_path %>
+<p><%= link_to 'All Projects', projects_path %></p>
+<p><%= link_to 'Delete Project', project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %></p>
