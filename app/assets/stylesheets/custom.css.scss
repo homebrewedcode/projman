@@ -1,0 +1,12 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.jumbotron {
+  background-image: url('background-jumbotron.jpg');
+  -webkit-background-size: cover;
+  background-size:cover;
+  color: #fefefe;
+}
+footer a:hover {
+  text-decoration: none;
+}
