@@ -3,14 +3,11 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-danger">
           <div class="panel-heading">
-            <div class="panel-title error-heading">
-              <p>
+            <div class="panel-title">
                 Your project was not saved due to the following
                 <%= pluralize(@project.errors.count, 'error') %>
-              </p>
-              <span class="pull-right clickable" data-effect="fadeOut"><i class="glyphicon glyphicon-remove"></i></span>
             </div>
-            
+            <span class="pull-right clickable" data-effect="fadeOut"><i class="glyphicon glyphicon-remove"></i></span>
           </div>
           <div class="panel-body">
             <ul>
