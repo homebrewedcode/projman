@@ -1,4 +1,4 @@
-<h1>Create a Project</h1>
+<h1 class="text-center">Create a Project</h1>
 <% if @project.errors.any? %>
     <ul>
       <% @project.errors.full_messages.each do |error| %>
@@ -7,11 +7,20 @@
     </ul>
 <% end %>
 <%= form_for @project, url: { action: "create" } do |project|%>
-    <%= project.text_field :title %>
+    <div class="form-group">
+      <%= project.label :title %>
+      <%= project.text_field :title, class: 'form-control', placeholder: 'Project Title', autofocus: true  %>
+    </div>
     <br />
-    <%= project.text_area :description %>
-    <br />
-    <%= project.submit "Create New Project" %>
+    <div class="form-group">
+      <%= project.label :description %>
+      <%= project.text_area :description, class: 'form-control', placeholder: 'Project Description', rows: '3' %>
+    </div>
+    <%= project.submit "Create New Project", class: 'btn btn-primary center' %>
 <% end %>
-<%= link_to 'Cancel and return to index', projects_path %>
+<p class="text-center">
+  [ <%= link_to 'Cancel and return to index', projects_path %> ]
+</p>
+
+
 
