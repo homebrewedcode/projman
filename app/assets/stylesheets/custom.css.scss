@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/**************Index styles***************/
 .jumbotron {
   background-image: url('background-jumbotron.jpg');
   -webkit-background-size: cover;
@@ -8,5 +9,9 @@
   color: #fefefe;
 }
 footer a:hover {
+  text-decoration: none;
+}
+/**************Project Listings***************/
+.project-title:hover {
   text-decoration: none;
 }
