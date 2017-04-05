@@ -1,11 +1,5 @@
 <h1 class="text-center">Create a Project</h1>
-<% if @project.errors.any? %>
-    <ul>
-      <% @project.errors.full_messages.each do |error| %>
-          <li><%= error %></li>
-      <% end %>
-    </ul>
-<% end %>
+<%= render 'layouts/errors' %>
 <%= form_for @project, url: { action: "create" } do |project|%>
     <div class="form-group">
       <%= project.label :title %>
